@@ -79,7 +79,7 @@ export default function FashionMirrorV1() {
         <div className="p-8 w-1/2">
           <iframe
             src="https://app.mymonitor.io/"
-            className="w-full h-screen rounded-lg"
+            className="w-full h-screen rounded-2xl"
           ></iframe>
         </div>
       </section>
