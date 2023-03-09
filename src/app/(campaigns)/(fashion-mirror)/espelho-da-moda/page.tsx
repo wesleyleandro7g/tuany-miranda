@@ -15,11 +15,12 @@ export default function FashionMirrorV1() {
 
   return (
     <main className={montserrat.className}>
-      <section className="min-h-screen relative flex flex-col items-center">
+      <section className="min-h-screen md:w-[900px] relative flex flex-col items-center lg-[1200px]">
         <Image src="/banner.png" alt="Closet" fill className="-z-10" />
         <Countdown />
 
         <div className="flex flex-col items-center gap-8 px-4 py-8 md:py-12 md:max-w-[900px]">
+          <h1>AQUI!</h1>
           <h1 className="text-2xl text-white text-center font-bold lg:text-4xl">
             Aprenda como transmitir todo o seu potencial através da sua imagem e{" "}
             <span className="text-violet-web">

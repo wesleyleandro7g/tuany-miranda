@@ -37,17 +37,15 @@ export default function FashionMirrorV1() {
               muted={false}
             />
 
-            {/* <Image
+            <Image
               src="/img01.svg"
               alt="Closet"
               fill
               className={`absolute z-10 opacity-${playing ? 0 : 1}`}
-            /> */}
+            />
             <button
               onClick={playPause}
-              className={`w-full h-full bg-black absolute z-20 flex justify-center items-center opacity-${
-                playing ? 0 : 50
-              }`}
+              className={`w-full h-full bg-black absolute z-20 flex justify-center items-center opacity-50`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
