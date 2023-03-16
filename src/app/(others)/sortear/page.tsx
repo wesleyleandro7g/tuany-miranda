@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Poppins } from "next/font/google";
 import Image from "next/image";
 import ReactPlayer from "react-player";
@@ -34,7 +34,7 @@ export default function Sort() {
     <main className={poppins.className}>
       <div className="flex flex-1 flex-col justify-center items-center w-full h-screen bg-black">
         {!playing && (
-          <div className="py-4">
+          <div className="py-4 mt-8">
             <Image
               src="/tuany-logo-light.svg"
               alt="Tuany Logo"
@@ -48,11 +48,11 @@ export default function Sort() {
           <div className="flex flex-1 flex-col justify-center items-center">
             {winningNumber ? (
               <div className="text-center">
-                <h1 className="text-white text-8xl">{winningNumber}</h1>
+                <h1 className="text-white text-9xl">{winningNumber}</h1>
                 <h1 className="text-white text-2xl">Número sorteado</h1>
 
                 <button
-                  className="w-80 h-12 rounded-md bg-white mt-4 lowercase"
+                  className="w-80 h-12 rounded-md bg-violet-web mt-4 lowercase text-white"
                   onClick={() => setWinningNumber(null)}
                 >
                   Sortear Novamente
@@ -63,11 +63,11 @@ export default function Sort() {
                 <input
                   type="number"
                   placeholder="Quantidade de participantes"
-                  className="w-full h-12 rounded-lg text-center"
+                  className="w-full h-12 rounded-lg text-center focus:border-none border-transparent focus:border-transparent focus:ring-0"
                   onChange={(e) => setMaxNumber(e.target.value)}
                 />
                 <button
-                  className="w-80 h-12 rounded-md bg-white lowercase"
+                  className="w-80 h-12 rounded-md bg-violet-web lowercase text-white"
                   onClick={startContdown}
                 >
                   Sortear
