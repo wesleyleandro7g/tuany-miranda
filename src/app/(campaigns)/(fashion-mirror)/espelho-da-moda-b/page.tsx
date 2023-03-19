@@ -1,18 +1,12 @@
 "use client";
 
-import { useState } from "react";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import Countdown from "@/components/countdown";
-import ReactPlayer from "react-player";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export default function FashionMirrorV1() {
-  const [playing, setPlaying] = useState(false);
-
-  const playPause = () => setPlaying(!playing);
-
   return (
     <main className={montserrat.className}>
       <section className="min-h-screen md:w-full relative flex flex-col items-center lg-[1200px]">
