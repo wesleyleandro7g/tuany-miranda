@@ -13,7 +13,11 @@ interface Props {
 
 export default function AccordionComponent({ data }: Props) {
   return (
-    <Accordion.Root type="single" collapsible className="w-full space-y-2">
+    <Accordion.Root
+      type="single"
+      collapsible
+      className="w-full space-y-2 lg:max-w-4xl"
+    >
       {data?.map((item) => (
         <Accordion.Item
           key={item.id}

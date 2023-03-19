@@ -4,7 +4,8 @@ export const FREQUENT_QUESTIONS: ItemType[] = [
   {
     id: "01",
     title: "Será que funciona?",
-    description: "Aqui vai a primeira resposta",
+    description:
+      "Sim! Centenas de alunas já aplicaram os conhecimentos contidos no curso e tiveram resultados positivos. Depende apenas de você se empenhar e colocar todos os aprendizados em prática.",
   },
   {
     id: "02",
@@ -32,8 +33,8 @@ export const FREQUENT_QUESTIONS: ItemType[] = [
   },
   {
     id: "06",
-    title: "Por quanto tempo posso acessar o curso?",
+    title: "Como é o curso por dentro?",
     description:
-      "Todo o conteúdo do curso é gravado e fica disponível durante 1 ano para você acessar quando quiser e de onde quiser.",
+      "O curso possui 5 módulos com vídeo aulas gravadas e e-books para te auxiliar em cada aula.",
   },
 ];

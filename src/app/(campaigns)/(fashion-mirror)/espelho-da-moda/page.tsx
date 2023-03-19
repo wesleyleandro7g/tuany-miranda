@@ -63,65 +63,69 @@ export default function FashionMirrorV1() {
       </section>
 
       <section className="flex flex-col items-center min-h-screen px-4 py-8 gap-4 bg-white">
-        <h1 className="text-4xl font-extrabold text-center text-claret mb-4">
+        <h1 className="text-4xl font-extrabold text-center text-claret mb-4 lg:max-w-screen-sm">
           Confira o que você vai aprender
         </h1>
 
-        <Image
-          src="/modules/aprenda-a-se-vestir-para-o-seu-corpo.jpg"
-          alt="Aprenda a se vestir para os eu tipo de corpo"
-          width={1000}
-          height={1000}
-          className="w-full h-auto object-contain"
-        />
-        <Image
-          src="/modules/estilo-pessoal.jpg"
-          alt="Descubra o seu estilo pessoal"
-          width={1000}
-          height={1000}
-          className="w-full h-auto object-contain"
-        />
-        <Image
-          src="/modules/aprenda-a-combinar-cores-e-estampas.jpg"
-          alt="Aprenda a combinar cores e estampas"
-          width={1000}
-          height={1000}
-          className="w-full h-auto object-contain"
-        />
-        <Image
-          src="/modules/guarda-roupa-dos-sonhos.jpg"
-          alt="Aprenda a montar o seu guarda roupa dos sonhos"
-          width={1000}
-          height={1000}
-          className="w-full h-auto object-contain"
-        />
-        <Image
-          src="/modules/visagismo.jpg"
-          alt="Visagismo foco no seu rosto"
-          width={1000}
-          height={1000}
-          className="w-full h-auto object-contain"
-        />
+        <div className="flex flex-col gap-4 w-full lg:grid lg:grid-cols-5">
+          <Image
+            src="/modules/aprenda-a-se-vestir-para-o-seu-corpo.jpg"
+            alt="Aprenda a se vestir para os eu tipo de corpo"
+            width={1000}
+            height={1000}
+            className="w-full h-auto object-contain"
+          />
+          <Image
+            src="/modules/estilo-pessoal.jpg"
+            alt="Descubra o seu estilo pessoal"
+            width={1000}
+            height={1000}
+            className="w-full h-auto object-contain"
+          />
+          <Image
+            src="/modules/aprenda-a-combinar-cores-e-estampas.jpg"
+            alt="Aprenda a combinar cores e estampas"
+            width={1000}
+            height={1000}
+            className="w-full h-auto object-contain"
+          />
+          <Image
+            src="/modules/guarda-roupa-dos-sonhos.jpg"
+            alt="Aprenda a montar o seu guarda roupa dos sonhos"
+            width={1000}
+            height={1000}
+            className="w-full h-auto object-contain"
+          />
+          <Image
+            src="/modules/visagismo.jpg"
+            alt="Visagismo foco no seu rosto"
+            width={1000}
+            height={1000}
+            className="w-full h-auto object-contain"
+          />
+        </div>
 
-        <h1 className="text-4xl font-extrabold text-center text-claret mt-8 mb-4">
+        <h1 className="text-4xl font-extrabold text-center text-claret mt-8 mb-4 lg:max-w-screen-sm">
           E você ainda terá acesso há um módulo bônus!
         </h1>
 
-        <Image
-          src="/modules/compras-inteligentes.jpg"
-          alt="Visagismo foco no seu rosto"
-          width={1000}
-          height={1000}
-          className="w-full h-auto object-contain"
-        />
+        <div>
+          <Image
+            src="/modules/compras-inteligentes.jpg"
+            alt="Visagismo foco no seu rosto"
+            width={1000}
+            height={1000}
+            className="w-full h-auto object-contain"
+          />
+        </div>
       </section>
 
       <section className="flex flex-col items-center relative px-4 py-8 gap-4 bg-claret">
-        <h1 className="text-4xl font-extrabold text-center text-white mt-8 mb-4">
+        <h1 className="text-4xl font-extrabold text-center text-white mt-8 mb-4 lg:max-w-screen-sm">
           E qual o investimento para ter acesso a tudo isso
         </h1>
 
-        <div className="flex flex-col w-full h-auto items-center px-4 py-12 gap-4 rounded-2xl bg-magenta-crayola">
+        <div className="flex flex-col w-full h-auto items-center px-4 py-12 gap-4 rounded-2xl bg-magenta-crayola lg:max-w-md">
           <span className="flex-nowrap text-white font-medium text-center">
             De <span className="text-dark-sienna line-through">R$1247,00</span>{" "}
             por
@@ -235,46 +239,86 @@ export default function FashionMirrorV1() {
           />
         </div>
 
-        <div className="flex flex-col w-full py-8">
+        <div className="flex flex-col items-center justify-center w-full py-8 lg:flex-row">
           <Image
             src="/selo-garantia.png"
             alt="sete dias de garantia"
             width={1000}
             height={1000}
-            className="w-full h-auto object-contain"
+            className="w-full h-auto object-contain lg:max-w-sm"
           />
 
-          <h4 className="text-4xl font-extrabold text-center text-white mt-8 mb-4 uppercase">
-            Risco zero <br /> por 7 dias
-          </h4>
+          <div className="lg:max-w-md">
+            <h4 className="text-4xl font-extrabold text-center text-white mt-8 mb-4 uppercase lg:text-left">
+              Risco zero <br /> por 7 dias
+            </h4>
 
-          <p className="text-white font-bold text-justify mt-4">
-            Se dentro de 7 dias após a sua inscrição, você sentir que o curso
-            não atendeu às suas expectativas ou que não era aquilo que estava
-            procurando, basta entrar em contato comigo que devolverei 100% do
-            valor que você investiu!
-          </p>
+            <p className="text-white font-bold text-justify mt-4 ">
+              Se dentro de 7 dias após a sua inscrição, você sentir que o curso
+              não atendeu às suas expectativas ou que não era aquilo que estava
+              procurando, basta entrar em contato comigo que devolverei 100% do
+              valor que você investiu!
+            </p>
+          </div>
         </div>
       </section>
 
       <section className="flex flex-col items-center relative py-8 gap-4 bg-magenta-crayola">
-        <div className="w-full">
+        <h3 className="text-4xl font-extrabold text-left text-white mt-8 mb-4 hidden lg:block lg:max-w-screen-sm">
+          Quem é <span className="text-claret">Tuany Miranda</span> e porque
+          você deveria me ouvir
+        </h3>
+        <div className="w-full lg:min-w-[600px] lg:max-w-4xl lg:flex lg:px-8 lg:items-start">
           <Image
             src="/tuany-miranda.png"
             alt="Tuany miranda"
             width={1200}
             height={1200}
-            className="w-full h-auto object-fill"
+            className="w-full h-auto object-contain lg:w-[500px]"
           />
+
+          <p className="text-white text-xs font-bold text-justify mt-4 hidden lg:block">
+            Meu nome é Tuany Miranda, sou designer de moda formada pela UFMG,
+            sou consultora de imagem e estilo, sou formada em Coloração Pessoal
+            e já ajudei centenas de mulheres a transformarem a sua imagem
+            pessoal e a mostrarem o seu real potencial através da sua imagem.{" "}
+            <br />
+            <br /> Eu passei a infância e a adolescência me sentindo feia,
+            deslocada, invisível, sem confiança e sem amor próprio. Eu sei o
+            quanto não gostar de quem se é machuca e te leva ao fundo do poço,
+            sei o quanto estar no fundo do poço pode te deixar acreditando que
+            não tem saída e que com o passar dos anos as coisas só pioram ainda
+            mais. <br />
+            <br /> Mas eu estou aqui pra te dizer que existe saída do fundo do
+            poço, que existe esse tal de amor próprio e que o cuidado e zelo com
+            a sua aparência física pode te ajudar a resgatar toda a segurança e
+            autoconfiança que com o passar dos anos foram perdidos. Eu estou
+            aqui pra te dizer que eu não quero te transformar em outra pessoa,
+            que eu não quero que você se torne escrava da moda e que eu não
+            quero te moldar em um padrão. Estou aqui pra te dizer que eu posso
+            te ajudar através de conhecimentos de moda, imagem e estilo, a se
+            encontrar, a se conhecer e a entender quem você é e o que você
+            realmente gosta. A transmitir às pessoas ao seu redor o melhor de
+            você mesma! Acredito que você tem um potencial incrível que está
+            adormecido e que eu sou capaz de te ajudar a revelar a pessoa
+            maravilhosa que você é através de uma imagem pessoal assertiva com
+            você mesmo, com sua profissão, suas qualidades, seu temperamento e
+            com quem você deseja ser! <br />
+            <br />
+            Eu acredito que você consegue e que você está preparada para essa
+            mudança! caso contrário não teria chegado até aqui. Vem comigo!
+            deixe eu ser sua fada madrinha. Transforme a sua imagem pessoal no
+            melhor de você mesma. Estou te esperando!
+          </p>
         </div>
 
         <div className="px-4">
-          <h3 className="text-4xl font-extrabold text-left text-white mt-8 mb-4">
+          <h3 className="text-4xl font-extrabold text-left text-white mt-8 mb-4 lg:hidden">
             Quem é <span className="text-claret">Tuany Miranda</span> e porque
             você deveria me ouvir
           </h3>
 
-          <p className="text-white font-bold text-justify mt-4">
+          <p className="text-white font-bold text-justify mt-4 lg:hidden">
             Meu nome é Tuany Miranda, sou designer de moda formada pela UFMG,
             sou consultora de imagem e estilo, sou formada em Coloração Pessoal
             e já ajudei centenas de mulheres a transformarem a sua imagem
@@ -317,15 +361,15 @@ export default function FashionMirrorV1() {
 
         <Accordion data={FREQUENT_QUESTIONS} />
 
-        <h1 className="text-4xl font-extrabold text-center text-magenta-crayola mt-12">
+        <h1 className="text-4xl font-extrabold text-center text-magenta-crayola mt-12 lg:max-w-screen-sm">
           Ficou com alguma dúvida ou precisa de ajuda?
         </h1>
 
         <p className="text-rick-black font-bold text-center">
-          Fale com o nosso time de suportes agora mesmo
+          Fale com o nosso time de suporte agora mesmo
         </p>
 
-        <button className="flex w-full justify-center items-center gap-4 px-8 py-4 rounded-full text-lg text-white uppercase font-bold whitespace-nowrap bg-gradient-to-r from-[#06B169] to-[#05693E]">
+        <button className="flex w-full max-w-fit justify-center items-center gap-4 px-8 py-4 rounded-full text-lg text-white uppercase font-bold whitespace-nowrap bg-gradient-to-r from-[#06B169] to-[#05693E]">
           <svg
             width="26"
             height="25"
@@ -340,12 +384,12 @@ export default function FashionMirrorV1() {
               fill="white"
             />
           </svg>
-          Converse com a gente
+          Preciso de ajuda
         </button>
       </section>
 
       <section className="flex flex-col w-full items-center relative py-8 px-4 gap-4 bg-rick-black">
-        <h1 className="text-3xl font-extrabold text-center text-white mt-8 mb-4">
+        <h1 className="text-3xl font-extrabold text-center text-white mt-8 mb-4 lg:max-w-screen-sm">
           Clique no botão abaixo e comece a sua transformação agora! Chegou a
           hora de ser a{" "}
           <span className="text-magenta-crayola">protagonista da sua vida</span>
@@ -375,7 +419,7 @@ export default function FashionMirrorV1() {
           alt="Métodos de pagamento"
           width={1000}
           height={1000}
-          className="w-[90%] h-auto object-contain"
+          className="w-[90%] lg:max-w-[200px] h-auto object-contain"
         />
       </section>
 

@@ -2,46 +2,21 @@
 
 import { useEffect, useState } from "react";
 
-const defaultTime = {
-  minutes: "18",
-  seconds: "36",
-};
+const INITIAL_TIME_IN_SECONDS = 19 * 60 - 24; // 18 minutes and 36 seconds
 
 export default function Countdown() {
-  const [time, setTime] = useState(defaultTime);
-  let intervalId: NodeJS.Timeout;
+  const [time, setTime] = useState(INITIAL_TIME_IN_SECONDS);
+
+  const minutes = Math.floor(time / 60);
+  const seconds = time % 60;
 
   useEffect(() => {
-    intervalId = setInterval(() => {
-      updateCountdown();
+    setTimeout(() => {
+      if (time < 1) return;
+
+      setTime((state) => state - 1);
     }, 1000);
-
-    return () => clearInterval(intervalId);
-  }, []);
-
-  function updateCountdown() {
-    setTime((oldTime) => {
-      if (Number(oldTime.minutes) === 0 && Number(oldTime.seconds) === 1) {
-        clearInterval(intervalId);
-      }
-
-      if (Number(oldTime.seconds) === 0) {
-        const minutes = `${Number(oldTime.minutes) - 1}`;
-
-        return {
-          seconds: "59",
-          minutes: minutes.length < 2 ? `0${minutes}` : minutes,
-        };
-      }
-
-      const seconds = `${Number(oldTime.seconds) - 1}`;
-
-      return {
-        seconds: seconds.length < 2 ? `0${seconds}` : seconds,
-        minutes: oldTime.minutes,
-      };
-    });
-  }
+  }, [time]);
 
   return (
     <div className="flex justify-center items-center gap-4 md:gap-6 w-full h-16 bg-violet-web">
@@ -63,7 +38,7 @@ export default function Countdown() {
       </div>
       <div className="text-center">
         <h1 className="text-[24px] md:text-[42px] text-dark-sienna font-extrabold leading-4 md:leading-8">
-          {time.minutes}
+          {String(minutes).padStart(2, "0")}
         </h1>
         <span className="text-[10px] md:text-xs text-dark-sienna font-bold uppercase">
           minutos
@@ -71,7 +46,7 @@ export default function Countdown() {
       </div>
       <div className="text-center">
         <h1 className="text-[24px] md:text-[42px] text-dark-sienna font-extrabold leading-4 md:leading-8">
-          {time.seconds}
+          {String(seconds).padStart(2, "0")}
         </h1>
         <span className="text-[10px] md:text-xs text-dark-sienna font-bold uppercase">
           Segundos
