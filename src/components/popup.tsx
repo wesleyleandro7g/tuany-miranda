@@ -3,6 +3,7 @@
 import React, { FormEvent, useRef } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import * as Form from "@radix-ui/react-form";
+import { useRouter } from "next/navigation";
 
 import { Poppins } from "next/font/google";
 
@@ -22,8 +23,9 @@ export default function Popup(props: Props) {
   const emailRef = useRef<HTMLInputElement>(null);
   const phoneRef = useRef<HTMLInputElement>(null);
 
-  const currentLocation = window.location.href;
-  const checkoutUrl = process.env.NEXT_PUBLIC_CHECKOUT_URL || currentLocation;
+  const router = useRouter();
+
+  const checkoutUrl = process.env.NEXT_PUBLIC_CHECKOUT_URL || "";
 
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
@@ -32,7 +34,11 @@ export default function Popup(props: Props) {
     const email = emailRef.current?.value;
     const phone = phoneRef.current?.value;
 
-    window.location.assign(
+    if (!checkoutUrl) {
+      return;
+    }
+
+    router.push(
       `${checkoutUrl}?name=${name}&email=${email}&phonenumber=${phone}`
     );
   };
