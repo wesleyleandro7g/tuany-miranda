@@ -1,11 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import { Poppins } from "next/font/google";
 import Image from "next/image";
 import Countdown from "@/components/countdown";
 import Accordion from "@/components/accordion";
 
 import { FREQUENT_QUESTIONS } from "./utils";
+import Popup from "@/components/popup";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -13,6 +15,11 @@ const poppins = Poppins({
 });
 
 export default function FashionMirrorV1() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openPopup = () => setIsOpen(true);
+  const closePopup = () => setIsOpen(false);
+
   return (
     <main className={poppins.className}>
       <section className="min-h-screen md:w-full relative flex flex-col items-center lg-[1200px]">
@@ -41,7 +48,10 @@ export default function FashionMirrorV1() {
             desperte todo o seu potencial. Chegou a hora de se tornar a{" "}
             <span className="text-violet-web">protagonista da sua vida!</span>
           </h1>
-          <button className="flex items-center gap-4 px-8 py-4 rounded-full bg-violet-web text-lg text-white uppercase font-bold max-w-fit whitespace-nowrap">
+          <button
+            onClick={openPopup}
+            className="flex items-center gap-4 px-8 py-4 rounded-full bg-violet-web text-lg text-white uppercase font-bold max-w-fit whitespace-nowrap"
+          >
             Eu quero começar já
             <svg
               width="30"
@@ -226,7 +236,10 @@ export default function FashionMirrorV1() {
             </div>
           </div>
 
-          <button className="flex w-full justify-center items-center gap-4 px-8 py-4 rounded-full text-lg text-white uppercase font-bold whitespace-nowrap bg-gradient-to-r from-[#06B169] to-[#05693E]">
+          <button
+            onClick={openPopup}
+            className="flex w-full justify-center items-center gap-4 px-8 py-4 rounded-full text-lg text-white uppercase font-bold whitespace-nowrap bg-gradient-to-r from-[#06B169] to-[#05693E]"
+          >
             Eu quero começar já
           </button>
 
@@ -396,7 +409,10 @@ export default function FashionMirrorV1() {
           .
         </h1>
 
-        <button className="flex items-center gap-4 px-8 py-4 rounded-full bg-violet-web text-lg text-white uppercase font-bold max-w-fit whitespace-nowrap">
+        <button
+          onClick={openPopup}
+          className="flex items-center gap-4 px-8 py-4 rounded-full bg-violet-web text-lg text-white uppercase font-bold max-w-fit whitespace-nowrap"
+        >
           Eu quero começar já
           <svg
             width="30"
@@ -428,6 +444,8 @@ export default function FashionMirrorV1() {
           © Copyright 2023 - Todos os direitos reservados
         </span>
       </section>
+
+      <Popup isOpen={isOpen} onClose={closePopup} />
     </main>
   );
 }
