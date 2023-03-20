@@ -1,3 +1,5 @@
+"use client";
+
 import React, { FormEvent, useRef } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import * as Form from "@radix-ui/react-form";
