@@ -150,8 +150,8 @@ export default function FashionMirrorV1() {
           </span>
 
           <div className="flex items-end">
-            <span className="text-dark-sienna font-bold">10x de</span>
-            <h3 className="text-dark-sienna text-6xl font-bold">R$39,70</h3>
+            <span className="text-dark-sienna font-bold">12x de</span>
+            <h3 className="text-dark-sienna text-6xl font-bold">R$39,86</h3>
           </div>
 
           <span className="text-white font-medium text-center">
