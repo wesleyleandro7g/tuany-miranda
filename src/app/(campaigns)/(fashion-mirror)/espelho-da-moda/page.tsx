@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Poppins } from "next/font/google";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Countdown from "@/components/countdown";
 import Accordion from "@/components/accordion";
@@ -15,10 +16,17 @@ const poppins = Poppins({
 });
 
 export default function FashionMirrorV1() {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
   const openPopup = () => setIsOpen(true);
   const closePopup = () => setIsOpen(false);
+
+  const sendMensage = () => {
+    router.push(
+      "https://wa.me/5538998739798?text=Oi+Tuany%2C+estou+com+d%C3%BAvidas+sobre+o+seu+curso%2C+voc%C3%AA+pode+me+ajudar%3F"
+    );
+  };
 
   return (
     <main className={poppins.className}>
@@ -119,7 +127,7 @@ export default function FashionMirrorV1() {
           E você ainda terá acesso há um módulo bônus!
         </h1>
 
-        <div>
+        <div className="w-full md:max-w-xs">
           <Image
             src="/modules/compras-inteligentes.jpg"
             alt="Visagismo foco no seu rosto"
@@ -142,7 +150,7 @@ export default function FashionMirrorV1() {
           </span>
 
           <div className="flex items-end">
-            <span className="text-dark-sienna font-bold">12x de</span>
+            <span className="text-dark-sienna font-bold">10x de</span>
             <h3 className="text-dark-sienna text-6xl font-bold">R$39,70</h3>
           </div>
 
@@ -382,7 +390,10 @@ export default function FashionMirrorV1() {
           Fale com o nosso time de suporte agora mesmo
         </p>
 
-        <button className="flex w-full max-w-fit justify-center items-center gap-4 px-8 py-4 rounded-full text-lg text-white uppercase font-bold whitespace-nowrap bg-gradient-to-r from-[#06B169] to-[#05693E]">
+        <button
+          onClick={sendMensage}
+          className="flex w-full max-w-fit justify-center items-center gap-4 px-8 py-4 rounded-full text-lg text-white uppercase font-bold whitespace-nowrap bg-gradient-to-r from-[#06B169] to-[#05693E]"
+        >
           <svg
             width="26"
             height="25"

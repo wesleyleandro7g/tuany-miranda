@@ -48,7 +48,7 @@ export default function Popup(props: Props) {
       <Dialog.Root open={props.isOpen}>
         <Dialog.Portal>
           <Dialog.Overlay className="backdrop-blur-md data-[state=open]:animate-overlayShow fixed inset-0" />
-          <Dialog.Content className="overflow-scroll data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] max-h-[85vh] w-[90vw] max-w-[450px] translate-x-[-50%] translate-y-[-50%] rounded-xl bg-white p-6 shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none">
+          <Dialog.Content className="overflow-y-scroll md:overflow-hidden data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] max-h-[85vh] w-[90vw] max-w-[450px] translate-x-[-50%] translate-y-[-50%] rounded-xl bg-white p-6 shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none">
             <Dialog.Title className="text-violet-web text-center text-3xl font-bold">
               Vamos iniciar...
             </Dialog.Title>
