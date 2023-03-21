@@ -50,10 +50,10 @@ export default function Popup(props: Props) {
           <Dialog.Overlay className="backdrop-blur-md data-[state=open]:animate-overlayShow fixed inset-0" />
           <Dialog.Content className="overflow-y-scroll md:overflow-hidden data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] max-h-[85vh] w-[90vw] max-w-[450px] translate-x-[-50%] translate-y-[-50%] rounded-xl bg-white p-6 shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none">
             <Dialog.Title className="text-violet-web text-center text-3xl font-bold">
-              Vamos iniciar...
+              Vamos Iniciar...
             </Dialog.Title>
-            <Dialog.Description className="text-rick-black text-center text-lg">
-              Por favor preencha os campos abaixo
+            <Dialog.Description className="text-rick-black text-center text-md leading-tight">
+              Por favor preencha as informações abaixo para continuar.
             </Dialog.Description>
 
             <Form.Root className="w-full" onSubmit={handleSubmit}>
@@ -87,7 +87,7 @@ export default function Popup(props: Props) {
                 <Form.Field className="grid mb-[10px]" name="email">
                   <div className="flex items-baseline justify-between">
                     <Form.Label className="text-[15px] font-medium leading-[35px] text-rick-black">
-                      Email
+                      Seu email
                     </Form.Label>
                     <Form.Message
                       className="text-[13px] text-rick-black opacity-[0.8]"
@@ -107,6 +107,7 @@ export default function Popup(props: Props) {
                       className="box-border w-full bg-gray-200 inline-flex h-12 appearance-none items-center justify-center rounded-md px-4 text-sm leading-none text-rick-black  outline-none focus:shadow-[0_0_0_1px_gray]"
                       type="email"
                       required
+                      placeholder="meuemail@email.com"
                       ref={emailRef}
                     />
                   </Form.Control>
@@ -115,7 +116,7 @@ export default function Popup(props: Props) {
                 <Form.Field className="grid mb-[10px]" name="phone">
                   <div className="flex items-baseline justify-between">
                     <Form.Label className="text-[15px] font-medium leading-[35px] text-rick-black">
-                      Telefone
+                      Seu telefone
                     </Form.Label>
                     <Form.Message
                       className="text-[13px] text-rick-black opacity-[0.8]"
@@ -129,6 +130,7 @@ export default function Popup(props: Props) {
                       className="box-border w-full bg-gray-200 inline-flex h-12 appearance-none items-center justify-center rounded-md px-4 text-sm leading-none text-rick-black  outline-none focus:shadow-[0_0_0_1px_gray]"
                       type="phone"
                       required
+                      placeholder="(99) 9 9999-9999"
                       ref={phoneRef}
                     />
                   </Form.Control>
