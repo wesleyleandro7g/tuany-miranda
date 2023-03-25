@@ -4,10 +4,11 @@ import { useEffect, useState } from "react";
 import { Poppins } from "next/font/google";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import Pixel from "react-facebook-pixel";
 import Countdown from "@/components/countdown";
 import Accordion from "@/components/accordion";
 import Popup from "@/components/popup";
+
+import * as fbq from "@/lib/fbPixel";
 
 import { FREQUENT_QUESTIONS } from "./utils";
 
@@ -30,7 +31,7 @@ export default function FashionMirrorV1() {
   };
 
   useEffect(() => {
-    Pixel.init(process.env.NEXT_PUBLIC_PIXEL_ID!);
+    fbq.pageview();
   }, []);
 
   return (

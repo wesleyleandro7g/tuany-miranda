@@ -15,11 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      {/* <Head>
-        <script
-          
-        />
-
+      <Head>
         <noscript>
           <img
             height="1"
@@ -28,9 +24,10 @@ export default function RootLayout({
             src="https://www.facebook.com/tr?id=768413347824647&ev=PageView&noscript=1"
           />
         </noscript>
-      </Head> */}
+      </Head>
       <Script
         id="fb-pixel"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             !function(f,b,e,v,n,t,s)
@@ -41,7 +38,7 @@ export default function RootLayout({
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '${process.env.NEXT_PUBLIC_PIXEL_ID}');
+            fbq('init', '${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID}');
             fbq('track', 'PageView');
           `,
         }}
