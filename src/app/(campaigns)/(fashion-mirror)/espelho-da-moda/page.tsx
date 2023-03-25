@@ -1,14 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Poppins } from "next/font/google";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import Pixel from "react-facebook-pixel";
 import Countdown from "@/components/countdown";
 import Accordion from "@/components/accordion";
+import Popup from "@/components/popup";
 
 import { FREQUENT_QUESTIONS } from "./utils";
-import Popup from "@/components/popup";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -27,6 +28,10 @@ export default function FashionMirrorV1() {
       "https://wa.me/5538998739798?text=Oi+Tuany%2C+estou+com+d%C3%BAvidas+sobre+o+seu+curso%2C+voc%C3%AA+pode+me+ajudar%3F"
     );
   };
+
+  useEffect(() => {
+    Pixel.init(process.env.NEXT_PUBLIC_PIXEL_ID!);
+  }, []);
 
   return (
     <main className={poppins.className}>
