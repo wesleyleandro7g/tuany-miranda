@@ -30,6 +30,7 @@ export default function RootLayout({
         </noscript>
       </Head> */}
       <Script
+        id="fb-pixel"
         dangerouslySetInnerHTML={{
           __html: `
             !function(f,b,e,v,n,t,s)
