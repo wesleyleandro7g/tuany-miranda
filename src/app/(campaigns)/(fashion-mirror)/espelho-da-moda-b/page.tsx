@@ -41,9 +41,10 @@ export default function FashionMirrorV1() {
         </div>
       </section>
       <section className="min-h-screen relative bg-violet-web flex justify-center items-center w-full">
-        <div className="p-8 w-1/2">
+        <div className="p-8 w-full">
           <iframe
-            src="https://app.mymonitor.io/"
+            id="monytor"
+            src="http://localhost:8080/"
             className="w-full h-screen rounded-2xl"
           ></iframe>
         </div>

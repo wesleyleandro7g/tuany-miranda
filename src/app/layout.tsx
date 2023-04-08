@@ -1,7 +1,15 @@
 "use-client";
 import "./globals.css";
-import Head from "next/head";
-import Script from "next/script";
+// import Head from "next/head";
+// import Script from "next/script";
+import { Poppins } from "next/font/google";
+
+import AuthContextProvider from "@/contexts/authContext";
+
+const poppins = Poppins({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "Tuany Miranda",
@@ -14,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-br">
-      <Head>
+    <html lang="pt-br" className={poppins.className}>
+      {/* <Head>
         <noscript>
           <img
             height="1"
@@ -42,8 +50,10 @@ export default function RootLayout({
             fbq('track', 'PageView');
           `,
         }}
-      />
-      <body>{children}</body>
+      /> */}
+      <body>
+        <AuthContextProvider>{children}</AuthContextProvider>
+      </body>
     </html>
   );
 }

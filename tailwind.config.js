@@ -17,6 +17,7 @@ module.exports = {
         "dark-sienna": "#31080F",
         vermilion: "#E64223",
         "rick-black": "#030305",
+        primary: "#C19992",
       },
     },
   },
